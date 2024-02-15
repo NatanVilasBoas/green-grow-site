@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -23,8 +23,6 @@ const NavLink = styled.button`
         color:#C8C8C8;
     }
 `
-
-
 
 const Navbar = () => {
     const navigate = useNavigate();
