@@ -11,7 +11,7 @@ const Card = styled.div`
     transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
     &:hover{
-        border-color: #4b4b4b;
+        border-color: #126024;
         z-index: 1;
         transform: translateX(12px);
     }
