@@ -3,73 +3,90 @@
 exports[`A página inicial deve ser renderizada 1`] = `
 <div>
   <div
-    class="sc-hLQSwg bgaAVe"
+    class="sc-hLQSwg fjaYRA"
   >
-    <h1>
-      Bem-vindo à GreenGrow - Transformando a Agricultura Urbana
-    </h1>
-    <p>
-      Seja bem-vindo à GreenGrow, sua fonte líder em soluções de agricultura urbana sustentável. Oferecemos uma variedade de produtos inovadores para ajudar você a cultivar alimentos frescos e saudáveis em seu próprio espaço urbano, de maneira fácil, sustentável e acessível.
-    </p>
-    <h3
-      style="font-family: Montserrat;"
+    <div
+      class="sc-jTQCzO iTqXyh"
     >
-      Por que escolher a GreenGrow?
-    </h3>
-    <section
-      class="sc-eDLKkx iWMWPc"
-      role="group"
+      <h1>
+        Bem-vindo à GreenGrow - Transformando a Agricultura Urbana
+      </h1>
+      <p>
+        Seja bem-vindo à GreenGrow, sua fonte líder em soluções de agricultura urbana sustentável. Oferecemos uma variedade de produtos inovadores para ajudar você a cultivar alimentos frescos e saudáveis em seu próprio espaço urbano, de maneira fácil, sustentável e acessível.
+      </p>
+    </div>
+    <div
+      class="sc-jTQCzO iTqXyh"
     >
-      <div
-        class="sc-guDLey lphenX"
+      <h3
+        style="font-family: Montserrat;"
       >
-        <h3
-          class="sc-dmyCSP jxlpum"
-        >
-          Produtos de Qualidade
-        </h3>
-        <p>
-          Nossos sistemas de cultivo vertical, compostagem doméstica e muito mais são projetados com os mais altos padrões de qualidade, garantindo resultados excepcionais.
-        </p>
-      </div>
-      <div
-        class="sc-guDLey lphenX"
+        Por que escolher a GreenGrow?
+      </h3>
+      <section
+        class="sc-eDLKkx emHLVR"
+        role="group-beneficios"
       >
-        <h3
-          class="sc-dmyCSP jxlpum"
+        <div
+          class="sc-guDLey eWjRJY"
         >
-          Sustentabilidade
-        </h3>
-        <p>
-          Estamos comprometidos com práticas agrícolas sustentáveis que beneficiam o meio ambiente e promovem comunidades mais saudáveis e resilientes.
-        </p>
-      </div>
-      <div
-        class="sc-guDLey lphenX"
+          <h3
+            class="sc-dmyCSP jxlpum"
+          >
+            Produtos de Qualidade
+          </h3>
+          <p>
+            Nossos sistemas de cultivo vertical, compostagem doméstica e muito mais são projetados com os mais altos padrões de qualidade, garantindo resultados excepcionais.
+          </p>
+        </div>
+        <div
+          class="sc-guDLey eWjRJY"
+        >
+          <h3
+            class="sc-dmyCSP jxlpum"
+          >
+            Sustentabilidade
+          </h3>
+          <p>
+            Estamos comprometidos com práticas agrícolas sustentáveis que beneficiam o meio ambiente e promovem comunidades mais saudáveis e resilientes.
+          </p>
+        </div>
+        <div
+          class="sc-guDLey eWjRJY"
+        >
+          <h3
+            class="sc-dmyCSP jxlpum"
+          >
+            Facilidade de Uso
+          </h3>
+          <p>
+            Nossos produtos são projetados pensando na facilidade de uso e são perfeitos para iniciantes e entusiastas experientes da jardinagem.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div
+      class="sc-jTQCzO iTqXyh"
+    >
+      <h3
+        style="font-family: Montserrat;"
       >
-        <h3
-          class="sc-dmyCSP jxlpum"
-        >
-          Facilidade de Uso
-        </h3>
-        <p>
-          Nossos produtos são projetados pensando na facilidade de uso e são perfeitos para iniciantes e entusiastas experientes da jardinagem.
-        </p>
-      </div>
-    </section>
-    <h3
-      style="font-family: Montserrat;"
+        O que é a agricultura urbana sustentável?
+      </h3>
+      <p>
+        É uma prática que envolve o cultivo de alimentos, plantas e outros produtos agrícolas em ambientes urbanos de maneira ecologicamente equilibrada, socialmente justa e economicamente viável. Ela busca promover a produção local de alimentos, reduzir a dependência de grandes cadeias de suprimentos e aumentar a resiliência das comunidades urbanas.
+      </p>
+    </div>
+    <div
+      class="sc-jTQCzO iTqXyh"
+      role="group-clientes"
     >
-      O que é a agricultura urbana sustentável?
-    </h3>
-    <p>
-      É uma prática que envolve o cultivo de alimentos, plantas e outros produtos agrícolas em ambientes urbanos de maneira ecologicamente equilibrada, socialmente justa e economicamente viável. Ela busca promover a produção local de alimentos, reduzir a dependência de grandes cadeias de suprimentos e aumentar a resiliência das comunidades urbanas.
-    </p>
-    <h3
-      style="font-family: Montserrat;"
-    >
-      O que nossos clientes dizem:
-    </h3>
+      <h3
+        style="font-family: Montserrat;"
+      >
+        O que nossos clientes dizem:
+      </h3>
+    </div>
     <button
       class="sc-beySPh gSdwCo"
     >

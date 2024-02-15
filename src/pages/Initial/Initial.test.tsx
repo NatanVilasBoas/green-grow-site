@@ -21,8 +21,16 @@ describe('A página inicial', () => {
     test('deve conter os benefícios', () => {
         render(<Initial/>)
 
-        const section = screen.getByRole('group');
+        const section = screen.getByRole('group-beneficios');
 
         expect(section).toBeInTheDocument();
+    })
+
+    test('deve conter os relatos de clientes', () => {
+        render(<Initial/>)
+
+        const relatoClientes = screen.getByRole('group-clientes');
+
+        expect(relatoClientes).toBeInTheDocument();
     })
 })

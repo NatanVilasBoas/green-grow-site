@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import CtaButton from "../../components/CtaButton/CtaButton";
 import styled from "styled-components";
 import CardBeneficio from "../../components/CardBeneficio/CardBeneficio";
+import CommentClient from "../../components/CommentClient/CommentClient";
 
 
 const Container = styled.div`
@@ -32,7 +33,7 @@ const Initial = () => {
 
             <Section>
                 <h3 style={{ fontFamily: "Montserrat" }}>Por que escolher a GreenGrow?</h3>
-                <Beneficios role="group">
+                <Beneficios role="group-beneficios">
                     <CardBeneficio
                         title="Produtos de Qualidade"
                         text="Nossos sistemas de cultivo vertical, compostagem doméstica e muito mais são projetados com os mais altos padrões de qualidade, garantindo resultados excepcionais." />
@@ -49,7 +50,10 @@ const Initial = () => {
                 <h3 style={{ fontFamily: "Montserrat" }}>O que é a agricultura urbana sustentável?</h3>
                 <p>É uma prática que envolve o cultivo de alimentos, plantas e outros produtos agrícolas em ambientes urbanos de maneira ecologicamente equilibrada, socialmente justa e economicamente viável. Ela busca promover a produção local de alimentos, reduzir a dependência de grandes cadeias de suprimentos e aumentar a resiliência das comunidades urbanas.</p>
             </Section>
-            <h3 style={{ fontFamily: "Montserrat" }}>O que nossos clientes dizem:</h3>
+            <Section role="group-clientes">
+                <h3 style={{ fontFamily: "Montserrat" }}>O que nossos clientes dizem:</h3>
+                <CommentClient name="Ana Silva, São Paulo" comment="Estou impressionada com a qualidade dos sistemas de cultivo vertical da GreenGrow. Eles ocupam pouco espaço e me permitem cultivar uma grande variedade de ervas frescas em minha cozinha!"/>
+            </Section>
 
             <CtaButton>Saiba mais</CtaButton>
             <CtaButton>Explore nossos produtos</CtaButton>
