@@ -17,4 +17,12 @@ describe('A página inicial', () => {
         })
 
     })
+
+    test('deve conter os benefícios', () => {
+        render(<Initial/>)
+
+        const section = screen.getByRole('group');
+
+        expect(section).toBeInTheDocument();
+    })
 })
