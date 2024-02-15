@@ -1,9 +1,17 @@
+:root {
+  --dartmouth-green: #015b16ff;
+  --pigment-green: #4caf50ff;
+  --russet: #8b4513ff;
+  --baby-powder: #fdfbf8ff;
+  --davys-gray: #4b4b4bff;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #fdfbf8;
 }
 
-p{
+p {
   font-weight: 300;
 }
