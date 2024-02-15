@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A página inicial deve ser renderizada 1`] = `
+<div>
+  <h1>
+    Primeira página
+  </h1>
+  <button
+    class="sc-beySPh gSdwCo"
+  >
+    Saiba mais
+  </button>
+  <button
+    class="sc-beySPh gSdwCo"
+  >
+    Explore nossos produtos
+  </button>
+</div>
+`;
