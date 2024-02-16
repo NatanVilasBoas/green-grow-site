@@ -66,7 +66,7 @@ const Initial = () => {
                     <CommentClient name="Ana Silva, São Paulo" comment="A GreenGrow mudou minha perspectiva sobre agricultura urbana! Seus produtos são incrivelmente fáceis de usar e me ajudaram a transformar minha varanda em um jardim cheio de vida." />
                     <CommentClient name=" Pedro Costa, Belo Horizonte" comment="Os produtos da GreenGrow não apenas me ajudaram a economizar dinheiro em alimentos frescos, mas também me conectaram mais com minha comunidade local. Recomendo!" />
                     <CommentClient name="Maria Santos, Brasília" comment="A compostagem doméstica da GreenGrow tornou o processo de reciclagem de resíduos orgânicos tão simples e eficiente. Estou feliz em contribuir para um ambiente mais saudável!" />
-                    <CommentClient name="João Costa, Rio de Janeiro" comment="Estou impressionada com a qualidade dos sistemas de cultivo vertical da GreenGrow. Eles ocupam pouco espaço e me permitem cultivar uma grande variedade de ervas frescas em minha cozinha!" />
+                    <CommentClient name="João Pereira, Rio de Janeiro" comment="Estou impressionada com a qualidade dos sistemas de cultivo vertical da GreenGrow. Eles ocupam pouco espaço e me permitem cultivar uma grande variedade de ervas frescas em minha cozinha!" />
                 </CommentContainer>
             </Section>
 

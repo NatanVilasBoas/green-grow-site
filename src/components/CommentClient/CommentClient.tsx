@@ -4,11 +4,12 @@ import styled from "styled-components";
 const Container = styled.div`
     width: 36vw;
     heigth: 12vh;
-    background-color: #FFFDF9;
-    border: 1px solid #4b4b4b;
-    border-radius: 24px;
     padding: 2em;
     margin: 1.1em;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--pigment-green);
 `
 
 const Autor = styled.div`
@@ -19,6 +20,7 @@ const Autor = styled.div`
 
 const Nome = styled.p`
     font-weight: 500;
+    color: var(--russet);
 `
 
 interface CommentClientProps {
@@ -32,7 +34,7 @@ const CommentClient: React.FC<CommentClientProps> = ({ name, comment }) => {
             <Autor>
                 <img width="50px" height="50px" src="/assets/avatar.png" />
             </Autor>
-                <Nome>{name}</Nome>
+            <Nome>{name}</Nome>
             <p>{comment}</p>
         </Container>
     )
