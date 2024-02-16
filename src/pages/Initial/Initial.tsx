@@ -20,6 +20,10 @@ const Section = styled.div`
     margin: 8vh 0;
 `
 
+const Title = styled.h3`
+    font-family: 'Montserrat', sans-serif;
+`
+
 const Initial = () => {
     useEffect(() => {
         document.title = 'Inicial';
@@ -32,7 +36,7 @@ const Initial = () => {
             </Section>
 
             <Section>
-                <h3 style={{ fontFamily: "Montserrat" }}>Por que escolher a GreenGrow?</h3>
+                <Title>Por que escolher a GreenGrow?</Title>
                 <Beneficios role="group-beneficios">
                     <CardBeneficio
                         title="Produtos de Qualidade"
@@ -47,11 +51,11 @@ const Initial = () => {
             </Section>
 
             <Section>
-                <h3 style={{ fontFamily: "Montserrat" }}>O que é a agricultura urbana sustentável?</h3>
+                <Title>O que é a agricultura urbana sustentável?</Title>
                 <p>É uma prática que envolve o cultivo de alimentos, plantas e outros produtos agrícolas em ambientes urbanos de maneira ecologicamente equilibrada, socialmente justa e economicamente viável. Ela busca promover a produção local de alimentos, reduzir a dependência de grandes cadeias de suprimentos e aumentar a resiliência das comunidades urbanas.</p>
             </Section>
             <Section role="group-clientes">
-                <h3 style={{ fontFamily: "Montserrat" }}>O que nossos clientes dizem:</h3>
+                <Title>O que nossos clientes dizem:</Title>
                 <CommentClient name="Ana Silva, São Paulo" comment="Estou impressionada com a qualidade dos sistemas de cultivo vertical da GreenGrow. Eles ocupam pouco espaço e me permitem cultivar uma grande variedade de ervas frescas em minha cozinha!"/>
             </Section>
 
