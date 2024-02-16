@@ -1,13 +1,22 @@
 import styled from "styled-components";
 
 const Card = styled.button`
-    border: 1px solid var(--davys-gray);
+    border: none;
     width: 340px;
     height: 500px;
     margin: 2vw;
     padding: 2vw;
     font-family: 'Poppins';
     box-sizing: content-box;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover{
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    }
 `
 
 const Title = styled.p`
