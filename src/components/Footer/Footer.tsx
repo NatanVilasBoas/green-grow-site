@@ -24,7 +24,7 @@ const Footer = () => {
     return (
         <Container>
             <div>
-                <p>Criado por <Link href="https://github.com/NatanVilasBoas">Natan Vilas Boas</Link></p>
+                <p>Criado por <Link href="https://github.com/NatanVilasBoas" target="_blank">Natan Vilas Boas</Link></p>
                 <p>Copyright &copy; Natan Vilas Boas - 2024</p>
             </div>
             <div>
