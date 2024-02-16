@@ -29,6 +29,10 @@ const Title = styled.h3`
 const PlantaImage = styled.img`
     border-radius: 24px;
     width: 54vw;
+
+    @media(max-width: 900px){
+        display: none;
+    }
     `
 
 const Initial = () => {
