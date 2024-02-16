@@ -21,6 +21,7 @@ const Card = styled.div`
 const Title = styled.h3`
     color: #8b4513;
     font-family: 'MontSerrat', sans-serif;
+    font-size: 24px;
 `
 
 interface CardBeneficioProps {
