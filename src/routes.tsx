@@ -9,6 +9,7 @@ const AppRoutes = () => {
             <Navbar/>
             <Routes>
                 <Route path="/" element={<Initial/>}/>
+                <Route path="/products"/>
             </Routes>
             <Footer/>
         </BrowserRouter>
