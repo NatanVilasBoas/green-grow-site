@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { useCarrinhoContext } from "../../context/Carrinho";
 
-const Card = styled.button`
+const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: none;
-    width: 340px;
-    height: 500px;
+    width: 430px;
     margin: 2vw;
     padding: 2vw;
     font-family: 'Poppins';
@@ -42,10 +45,22 @@ interface CardProductProps {
     desc: string;
 }
 
+
+
 const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, desc }) => {
+
+    const {addItem, itens} = useCarrinhoContext();
+
+    const item = {titulo, valor, quant, img, desc};
+
+    const adicionarAoCarrinho = () => {
+        addItem(item)
+        console.log(itens);
+    }
+
     return (
-        <Card role="product">
-            <img src={img} />
+        <Card id={titulo} role="product">
+            <img src={img} alt={titulo} />
             <Title>{titulo}</Title>
             <Info>
                 <p style={{fontWeight: 500}}>R${valor}</p>
@@ -55,6 +70,9 @@ const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, de
                 <p style={{fontSize:"16px"}}>Descrição:</p>
                 <p>{desc}</p>
             </DescContainer>
+            <div>
+                <button onClick={adicionarAoCarrinho}>Adicionar ao Carrinho</button>
+            </div>
         </Card>
     )
 }
