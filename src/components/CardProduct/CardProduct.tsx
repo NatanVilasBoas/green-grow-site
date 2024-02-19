@@ -49,13 +49,12 @@ interface CardProductProps {
 
 const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, desc }) => {
 
-    const {addItem, itens} = useCarrinhoContext();
+    const {addItem} = useCarrinhoContext();
 
     const item = {titulo, valor, quant, img, desc};
 
     const adicionarAoCarrinho = () => {
         addItem(item)
-        console.log(itens);
     }
 
     return (

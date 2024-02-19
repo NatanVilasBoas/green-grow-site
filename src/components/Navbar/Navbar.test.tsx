@@ -18,15 +18,19 @@ describe('Na navbar', () => {
                 <Navbar/>
             </BrowserRouter> )
 
+        const inicioLink = screen.getByText('Inicio');
         const contatoLink = screen.getByText('Contato');
         const produtosLink = screen.getByText('Produtos');
         const blogLink = screen.getByText('Blog');
         const projetosLink = screen.getByText('Projetos');
+        const carrinhoLink = screen.getByAltText('carrinho de compras');
 
+        expect(inicioLink).toBeInTheDocument();
         expect(contatoLink).toBeInTheDocument();
         expect(produtosLink).toBeInTheDocument();
         expect(blogLink).toBeInTheDocument();
         expect(projetosLink).toBeInTheDocument();
+        expect(carrinhoLink).toBeInTheDocument();
     })
 
     test('Os links devem redirecionar a outras páginas', () => {
