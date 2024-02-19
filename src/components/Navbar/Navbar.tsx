@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { useCarrinhoContext } from "../../context/Carrinho";
 
 const Container = styled.section`
     display: flex;
@@ -12,7 +14,7 @@ const Container = styled.section`
 
 const NavLink = styled.button`
     text-decoration: none;
-    color: #fdfbf8;
+    color: var(--baby-powder);
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -24,22 +26,46 @@ const NavLink = styled.button`
     }
 `
 
+const CartIconContainer = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const CartCounter = styled.p`
+    display: inline-block;
+    background-color: var(--pigment-green);
+    padding: 0.3em;
+    border-radius: 55px;
+`
+
 const Navbar = () => {
     const navigate = useNavigate();
+    const { itens } = useCarrinhoContext();
+    const [counter, setCounter] = useState(0);
 
-    const handleNavigation = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, route : string) => {
+    useEffect(() => {
+        setCounter(itens.length)
+    }, [itens])
+
+    const handleNavigation = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, route: string) => {
         e.preventDefault();
         navigate(route);
     };
 
     return (
         <Container>
-                <NavLink onClick={(event) => handleNavigation( event, '/' )}>Inicio</NavLink>
-                <NavLink onClick={(event) => handleNavigation( event, '/products' )}>Produtos</NavLink>
-                <NavLink onClick={(event) => handleNavigation( event, '/blog' )}>Blog</NavLink>
-                <NavLink onClick={(event) => handleNavigation( event, '/projects' )}>Projetos</NavLink>
-                <NavLink onClick={(event) => handleNavigation( event, '/contact' )}>Contato</NavLink>
-                <NavLink onClick={(event) => handleNavigation( event, '/cart' )}><img src="assets/cartIcon.svg" alt="carrinho de compras" /></NavLink>
+            <NavLink onClick={(event) => handleNavigation(event, '/')}>Inicio</NavLink>
+            <NavLink onClick={(event) => handleNavigation(event, '/products')}>Produtos</NavLink>
+            <NavLink onClick={(event) => handleNavigation(event, '/blog')}>Blog</NavLink>
+            <NavLink onClick={(event) => handleNavigation(event, '/projects')}>Projetos</NavLink>
+            <NavLink onClick={(event) => handleNavigation(event, '/contact')}>Contato</NavLink>
+            <NavLink onClick={(event) => handleNavigation(event, '/cart')}>
+                <CartIconContainer>
+                    {counter > 0 && <CartCounter>{counter}</CartCounter>}
+                    <img src="assets/cartIcon.svg" alt="carrinho de compras" />
+                </CartIconContainer></NavLink>
         </Container>
     )
 }
