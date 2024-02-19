@@ -1,11 +1,12 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import Navbar from "./Navbar";
 import { BrowserRouter } from "react-router-dom";
+import CarrinhoProvider from "../../context/Carrinho";
 
 const mockNavegacao = jest.fn();
 
 jest.mock('react-router-dom', () => {
-    return{
+    return {
         ...jest.requireActual('react-router-dom'),
         useNavigate: () => mockNavegacao
     }
@@ -15,8 +16,10 @@ describe('Na navbar', () => {
     test('Os links devem ser renderizados', () => {
         render(
             <BrowserRouter>
-                <Navbar/>
-            </BrowserRouter> )
+                <CarrinhoProvider>
+                    <Navbar />
+                </CarrinhoProvider>
+            </BrowserRouter>)
 
         const inicioLink = screen.getByText('Inicio');
         const contatoLink = screen.getByText('Contato');
@@ -36,7 +39,9 @@ describe('Na navbar', () => {
     test('Os links devem redirecionar a outras páginas', () => {
         render(
             <BrowserRouter>
-                <Navbar/>
+                <CarrinhoProvider>
+                    <Navbar />
+                </CarrinhoProvider>
             </BrowserRouter>
         )
 
@@ -46,7 +51,7 @@ describe('Na navbar', () => {
             fireEvent.click(link)
 
         })
-        
+
         expect(mockNavegacao).toHaveBeenCalledTimes(links.length);
     })
 })
