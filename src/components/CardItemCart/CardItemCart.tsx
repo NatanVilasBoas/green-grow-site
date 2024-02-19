@@ -36,7 +36,7 @@ interface CardItemCartProps {
 const CardItemCart: React.FC<CardItemCartProps> = ({ titulo, valor, quant, img, desc }) => {
 
     return (
-        <Card id={titulo} role="product">
+        <Card id={titulo} role="item">
             <img src={img} alt={titulo} />
             <div style={{margin: '1vw'}}>
                 <Info>
