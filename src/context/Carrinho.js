@@ -18,8 +18,15 @@ export function useCarrinhoContext(){
     const {itens, setItens} = useContext(CarrinhoContext);
 
     const addItem = (newItem) => {
-        let newList = [...itens, newItem];
-        setItens(newList);
+        const existingItemIndex = itens.findIndex(item => item.id === newItem.id);
+
+        if (existingItemIndex !== -1) {
+            const updatedItens = [...itens];
+            updatedItens[existingItemIndex].quant += 1;
+            setItens(updatedItens);
+        } else {
+            setItens([...itens, {...newItem}]);
+        }
     }
 
     const removeItem = (itemId) => {

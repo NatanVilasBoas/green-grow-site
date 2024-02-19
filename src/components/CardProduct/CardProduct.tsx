@@ -51,7 +51,7 @@ const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, de
 
     const {addItem} = useCarrinhoContext();
 
-    const item = {id : titulo, valor, quant, img, desc};
+    const item = {id : titulo, valor, quant : 1, img, desc};
 
     const adicionarAoCarrinho = () => {
         addItem(item)
