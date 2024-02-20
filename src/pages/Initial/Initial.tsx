@@ -53,7 +53,7 @@ const Initial = () => {
 
     return (
         <section>
-            <Section>
+            <Section style={{ backgroundColor: "var(--dartmouth-green)", color: "var(--baby-powder)" }}>
                 <h1 style={{ fontSize: "40px" }}>Bem-vindo à GreenGrow - Transformando a Agricultura Urbana</h1>
                 <p>Seja bem-vindo à GreenGrow, sua fonte líder em soluções de agricultura urbana sustentável. Oferecemos uma variedade de produtos inovadores para ajudar você a cultivar alimentos frescos e saudáveis em seu próprio espaço urbano, de maneira fácil, sustentável e acessível.</p>
             </Section>
