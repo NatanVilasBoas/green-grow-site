@@ -38,6 +38,27 @@ const DescContainer = styled.div`
     text-align: left;
 `
 
+const AddCart = styled.button`
+    width: 50%;
+    height: 6vh;
+    font-size: 14px;
+    font-Family: 'Poppins';
+    border: 1px solid var(--pigment-green);
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.15s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover{
+        background-color: var(--pigment-green);
+        color: var(--baby-powder);
+    }
+
+    &:active{
+        background-color: var(--dartmouth-green);
+    }
+`
+
 interface CardProductProps {
     id: number;
     titulo: string;
@@ -72,7 +93,7 @@ const CardProduct: React.FC<CardProductProps> = ({ id, titulo, valor, quant, img
                 <p>{desc}</p>
             </DescContainer>
             <div>
-                <button onClick={adicionarAoCarrinho}>Adicionar ao Carrinho</button>
+                <AddCart onClick={adicionarAoCarrinho}>Adicionar ao Carrinho</AddCart>
             </div>
         </Card>
     )
