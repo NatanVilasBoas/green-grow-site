@@ -22,7 +22,7 @@ const Cart = () => {
         <Container>
             <h1>Seu carrinho</h1>
             {itens.length > 0 ? itens.map((item : Record<string, any>) => {
-               return <CardItemCart key={item.id} titulo={item.id} valor={item.valor} quant={item.quant} img={item.img} desc={item.desc}/>
+               return <CardItemCart key={item.id} titulo={item.titulo} valor={item.valor} quant={item.quant} img={item.img} desc={item.desc}/>
             }) : <Message>Não há itens no carrinho.</Message>}
         </Container>
     )
