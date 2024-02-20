@@ -1,5 +1,14 @@
-import { render, screen } from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import Initial from "./Initial";
+
+const mockNavegacao = jest.fn();
+
+jest.mock('react-router-dom', () => {
+    return{
+        ...jest.requireActual('react-router-dom'),
+        useNavigate: () => mockNavegacao
+    }
+})
 
 describe('A página inicial', () => {
     test('deve ser renderizada', () => {
@@ -32,5 +41,17 @@ describe('A página inicial', () => {
         const relatoClientes = screen.getByRole('group-clientes');
 
         expect(relatoClientes).toBeInTheDocument();
+    })
+
+    test('os CTAs devem redirecionar a outras páginas', () => {
+        render(<Initial/>)
+
+        const buttons = screen.getAllByRole('button');
+
+        buttons.forEach((button) => {
+            fireEvent.click(button)
+        })
+
+        expect(mockNavegacao).toHaveBeenCalledTimes(buttons.length);
     })
 })

@@ -3,6 +3,7 @@ import CtaButton from "../../components/CtaButton/CtaButton";
 import styled from "styled-components";
 import CardBeneficio from "../../components/CardBeneficio/CardBeneficio";
 import CommentClient from "../../components/CommentClient/CommentClient";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.section`
     display: flex;
@@ -36,9 +37,20 @@ const PlantaImage = styled.img`
     `
 
 const Initial = () => {
+
+    const navigate = useNavigate();
+
     useEffect(() => {
         document.title = 'Inicial';
     })
+
+    
+    const navigateFor = ( route : string) => {
+        if (typeof navigate === 'function') {
+            navigate(route);
+        }
+    } 
+
     return (
         <section>
             <Section>
@@ -59,14 +71,14 @@ const Initial = () => {
                         text="Nossos produtos são projetados pensando na facilidade de uso e são perfeitos para iniciantes e entusiastas experientes da jardinagem." />
                 </Container>
                 <p>Saiba mais sobre nossos produtos e comece sua jornada rumo à agricultura urbana sustentável hoje mesmo!</p>
-                <CtaButton>Explore nossos produtos</CtaButton>
+                <CtaButton onHandleNavigate={() => navigateFor('/products')}>Explore nossos produtos</CtaButton>
             </Section>
             <Container style={{ backgroundColor: "var(--dartmouth-green)" }}>
                 <div style={{ display: "flex" }}>
                     <div style={{ marginRight: "34px" }}>
                         <Title style={{ color: "var(--baby-powder)" }}>O que é a agricultura urbana sustentável?</Title>
                         <p style={{ color: "var(--baby-powder)" }}>É uma prática que envolve o cultivo de alimentos, plantas e outros produtos agrícolas em ambientes urbanos de maneira ecologicamente equilibrada, socialmente justa e economicamente viável. Ela busca promover a produção local de alimentos, reduzir a dependência de grandes cadeias de suprimentos e aumentar a resiliência das comunidades urbanas.</p>
-                        <CtaButton>Saiba mais</CtaButton>
+                        <CtaButton onHandleNavigate={() => navigateFor('/about')}>Saiba mais</CtaButton>
                     </div>
                     <PlantaImage src="/assets/planta-na-mao.jpg" />
                 </div>

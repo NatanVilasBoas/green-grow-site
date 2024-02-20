@@ -21,12 +21,20 @@ const Button = styled.button`
 
 interface CtaButtonProps {
     children: ReactNode; // Definindo children como ReactNode
+    onHandleNavigate: () => void;
 }
 
 
-const CtaButton : React.FC<CtaButtonProps> = ({ children }) => {
+const CtaButton : React.FC<CtaButtonProps> = ({ children, onHandleNavigate }) => {
+
+    const handleClick = () => {
+        if (typeof onHandleNavigate === 'function') {
+            onHandleNavigate();
+        }
+    };
+
     return(
-        <Button>
+        <Button onClick={handleClick}>
             {children}
         </Button>
     )
