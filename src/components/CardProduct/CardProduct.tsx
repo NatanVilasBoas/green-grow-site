@@ -47,8 +47,6 @@ interface CardProductProps {
     onAddToCart: () => void;
 }
 
-
-
 const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, desc, onAddToCart }) => {
 
     const { addItem } = useCarrinhoContext();

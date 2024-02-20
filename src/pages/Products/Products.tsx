@@ -4,7 +4,6 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 
 import 'react-toastify/dist/ReactToastify.css';
 
-
 const Container = styled.section`
     display: flex;
     justify-content: center;
@@ -13,22 +12,19 @@ const Container = styled.section`
 
 const Products = () => {
 
-    // Função que adiciona um item e exibe o toast
     const notify = () => {
         toast.success('Item adicionado ao carrinho', {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
-            pauseOnHover: true,
+            pauseOnHover: false,
             draggable: true,
             progress: undefined,
             theme: "light",
             transition: Bounce,
         })
     };
-
-    
 
     return (
         <Container>
@@ -41,7 +37,6 @@ const Products = () => {
             rtl={false}
             pauseOnFocusLoss
             draggable
-            pauseOnHover
             theme="light"
             />
             <CardProduct
