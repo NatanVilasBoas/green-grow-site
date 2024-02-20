@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useCarrinhoContext } from "../../context/Carrinho";
 
+import 'react-toastify/dist/ReactToastify.css';
+
 const Card = styled.div`
     display: flex;
     flex-direction: column;
@@ -42,18 +44,20 @@ interface CardProductProps {
     quant: number;
     img: string;
     desc: string;
+    onAddToCart: () => void;
 }
 
 
 
-const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, desc }) => {
+const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, desc, onAddToCart }) => {
 
-    const {addItem} = useCarrinhoContext();
+    const { addItem } = useCarrinhoContext();
 
-    const item = {id : titulo, valor, quant : 1, img, desc};
+    const item = { id: titulo, valor, quant: 1, img, desc };
 
     const adicionarAoCarrinho = () => {
         addItem(item)
+        onAddToCart()
     }
 
     return (
@@ -61,11 +65,11 @@ const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, de
             <img src={img} alt={titulo} />
             <Title>{titulo}</Title>
             <Info>
-                <p style={{fontWeight: 500}}>R${valor}</p>
-                <p style={{fontWeight: 500}}>Quantidade: {quant}</p>
+                <p style={{ fontWeight: 500 }}>R${valor}</p>
+                <p style={{ fontWeight: 500 }}>Quantidade: {quant}</p>
             </Info>
             <DescContainer>
-                <p style={{fontSize:"16px"}}>Descrição:</p>
+                <p style={{ fontSize: "16px" }}>Descrição:</p>
                 <p>{desc}</p>
             </DescContainer>
             <div>
