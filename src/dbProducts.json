@@ -40,4 +40,22 @@
     "value": 89.90,
     "quant": 50,
     "desc": "Conjunto de ferramentas de jardinagem de alta qualidade, incluindo pá, enxada, tesouras de poda e regador."
+}, {
+    "id": 8,
+    "title": "Caixa de Plantio de Vegetais de Raiz",
+    "value": 49.90,
+    "quant": 70,
+    "desc": "Uma caixa de plantio especial para cultivar vegetais de raiz, como cenoura, beterraba e rabanete, em espaços limitados."
+}, {
+    "id": 9,
+    "title": "Fertilizante Líquido para Plantas de Interior",
+    "value": 14.90,
+    "quant": 120,
+    "desc": "Um fertilizante líquido formulado especificamente para fornecer nutrientes essenciais às plantas de interior."
+}, {
+    "id": 10,
+    "title": "Kit de Hidroponia DIY",
+    "value": 349.00,
+    "quant": 20,
+    "desc": "Um kit completo para montar um sistema de cultivo hidropônico em casa, permitindo o cultivo de plantas sem solo."
 } ]

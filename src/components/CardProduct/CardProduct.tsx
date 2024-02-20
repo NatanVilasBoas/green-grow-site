@@ -8,13 +8,13 @@ const Card = styled.div`
     flex-direction: column;
     justify-content: center;
     border: none;
-    width: 430px;
+    width: 370px;
     margin: 2vw;
     padding: 2vw;
     font-family: 'Poppins';
     box-sizing: content-box;
     border-radius: 12px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
     &:hover{

@@ -9,6 +9,7 @@ const Container = styled.section`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 `
 
 const Products = () => {
