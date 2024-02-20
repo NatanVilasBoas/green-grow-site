@@ -9,6 +9,12 @@ const Container = styled.section`
     text-align: center;
 `
 
+const Message = styled.p`
+    width: 100%;
+    font-size: 24px;
+    margin: 25vh 0;
+`
+
 const Cart = () => {
     const {itens} = useCarrinhoContext();
 
@@ -17,7 +23,7 @@ const Cart = () => {
             <h1>Seu carrinho</h1>
             {itens.length > 0 ? itens.map((item : Record<string, any>) => {
                return <CardItemCart key={item.id} titulo={item.id} valor={item.valor} quant={item.quant} img={item.img} desc={item.desc}/>
-            }) : <p>Não há itens no carrinho.</p>}
+            }) : <Message>Não há itens no carrinho.</Message>}
         </Container>
     )
 }
