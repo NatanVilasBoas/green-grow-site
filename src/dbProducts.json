@@ -1,0 +1,43 @@
+[{
+    "id": 1,
+    "title": "Kit de Horta Suspensa",
+    "value": 179.90,
+    "quant": 40,
+    "desc": "Um conjunto completo para criar uma horta suspensa em varandas ou paredes, incluindo vasos, suportes e substrato."
+}, {
+    "id": 2,
+    "title": "Estufa Doméstica de Pequeno Porte",
+    "value": 249.00,
+    "quant": 25,
+    "desc": "Uma estufa compacta para cultivar plantas em ambientes internos, ideal para apartamentos e espaços pequenos."
+},{
+    "id": 3,
+    "title": "Sementeira de Microgreens",
+    "value": 39.90,
+    "quant": 80,
+    "desc": "Uma bandeja especial para cultivar microgreens frescos em casa, fornecendo uma fonte nutritiva de vegetais jovens."
+}, {
+    "id": 4,
+    "title": "Adubo Orgânico em Pó",
+    "value": 19.90,
+    "quant": 100,
+    "desc": " Um adubo orgânico em forma de pó, rico em nutrientes essenciais para promover o crescimento saudável das plantas."
+}, {
+    "id": 5,
+    "title": "Luminária LED para Plantio Indoor",
+    "value": 129.00,
+    "quant": 35,
+    "desc": "Uma luminária LED especialmente projetada para fornecer luz adequada para o cultivo de plantas em ambientes internos."
+}, {
+    "id": 6,
+    "title": "Kits de Sementes de Flores Silvestres",
+    "value": 29.90,
+    "quant": 80,
+    "desc": "Conjunto de sementes de flores silvestres nativas, ideais para atrair polinizadores e adicionar beleza natural ao jardim."
+},{
+    "id": 7,
+    "title": "Kit de Ferramentas de Jardinagem",
+    "value": 89.90,
+    "quant": 50,
+    "desc": "Conjunto de ferramentas de jardinagem de alta qualidade, incluindo pá, enxada, tesouras de poda e regador."
+} ]

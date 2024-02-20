@@ -39,6 +39,7 @@ const DescContainer = styled.div`
 `
 
 interface CardProductProps {
+    id: number;
     titulo: string;
     valor: number;
     quant: number;
@@ -47,11 +48,11 @@ interface CardProductProps {
     onAddToCart: () => void;
 }
 
-const CardProduct: React.FC<CardProductProps> = ({ titulo, valor, quant, img, desc, onAddToCart }) => {
+const CardProduct: React.FC<CardProductProps> = ({ id, titulo, valor, quant, img, desc, onAddToCart }) => {
 
     const { addItem } = useCarrinhoContext();
 
-    const item = { id: titulo, valor, quant: 1, img, desc };
+    const item = { id, titulo, valor, quant: 1, img, desc };
 
     const adicionarAoCarrinho = () => {
         addItem(item)
