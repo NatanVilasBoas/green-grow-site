@@ -6,13 +6,14 @@ import { useCarrinhoContext } from "../../context/Carrinho";
 const Container = styled.section`
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 `
 
 const Message = styled.p`
     width: 100%;
     font-size: 24px;
     margin: 25vh 0;
+    text-align: center;
 `
 
 const ClearButton = styled.button`
