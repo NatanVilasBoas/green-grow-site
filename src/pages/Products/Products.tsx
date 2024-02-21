@@ -4,6 +4,7 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import produtos from "../../dbProducts.json";
 
 import 'react-toastify/dist/ReactToastify.css';
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Container = styled.section`
     display: flex;
@@ -29,30 +30,34 @@ const Products = () => {
     };
 
     return (
-        <Container>
-            <ToastContainer 
-            position="top-center"
-            autoClose={2000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            theme="light"
-            />
-            {produtos.map( produto => 
-                            <CardProduct
-                                key={produto.id}
-                                id={produto.id} 
-                                titulo={produto.title} 
-                                valor={produto.value}
-                                quant={produto.quant}
-                                desc={produto.desc}
-                                img="https://placehold.co/250x200"
-                                onAddToCart={() => notify()}
-                                />)}
-        </Container>
+        <>
+            <SearchBar />
+            <Container>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    theme="light"
+                />
+
+                {produtos.map(produto =>
+                    <CardProduct
+                        key={produto.id}
+                        id={produto.id}
+                        titulo={produto.title}
+                        valor={produto.value}
+                        quant={produto.quant}
+                        desc={produto.desc}
+                        img="https://placehold.co/250x200"
+                        onAddToCart={() => notify()}
+                    />)}
+            </Container>
+        </>
     )
 }
 
