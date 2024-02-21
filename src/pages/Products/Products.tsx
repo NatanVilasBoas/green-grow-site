@@ -5,6 +5,7 @@ import produtos from "../../dbProducts.json";
 
 import 'react-toastify/dist/ReactToastify.css';
 import SearchBar from "../../components/SearchBar/SearchBar";
+import { useState } from "react";
 
 const Container = styled.section`
     display: flex;
@@ -14,6 +15,8 @@ const Container = styled.section`
 `
 
 const Products = () => {
+    const [search, setSearch] = useState('');
+    const [filteredProducts, setFilteredProducts] = useState(produtos);
 
     const notify = () => {
         toast.success('Item adicionado ao carrinho', {
@@ -29,9 +32,16 @@ const Products = () => {
         })
     };
 
+    const onHandleSearch = (value : string) => {
+        setSearch(value);
+        const filtered = produtos.filter(produto => produto.title.toLowerCase().includes(value.toLowerCase()));
+
+        setFilteredProducts(filtered);
+    }
+
     return (
         <>
-            <SearchBar />
+            <SearchBar filter={value => onHandleSearch(value)}/>
             <Container>
                 <ToastContainer
                     position="top-center"
@@ -45,7 +55,7 @@ const Products = () => {
                     theme="light"
                 />
 
-                {produtos.map(produto =>
+                {filteredProducts.map(produto =>
                     <CardProduct
                         key={produto.id}
                         id={produto.id}

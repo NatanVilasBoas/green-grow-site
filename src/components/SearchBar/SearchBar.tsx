@@ -17,10 +17,14 @@ const SearchButton = styled.button`
     border-radius: 0 12px 12px 0;
 `
 
-const SearchBar = () => {
+interface SearchBarProps{
+    filter: (value : string) => void;
+}
+
+const SearchBar : React.FC<SearchBarProps>= ({filter}) => {
     return(
             <Container>
-                <SearchInput type="text" placeholder="Busque por um produto"/>
+                <SearchInput onChange={e => filter(e.target.value)} type="text" placeholder="Busque por um produto"/>
                 <SearchButton>Pesquisar</SearchButton>
             </Container>
     )
