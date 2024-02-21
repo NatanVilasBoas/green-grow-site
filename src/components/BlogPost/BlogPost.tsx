@@ -21,7 +21,7 @@ const Image = styled.div`
 
 const BlogPost = () => {
     return (
-        <Post>
+        <Post role="post">
             <Image>
             </Image>
             <Info>
