@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import { Bounce, ToastContainer, toast } from "react-toastify";
-import produtos from "../../dbProducts.json";
+import produtos from "../../json/dbProducts.json";
 
 import 'react-toastify/dist/ReactToastify.css';
 import SearchBar from "../../components/SearchBar/SearchBar";
