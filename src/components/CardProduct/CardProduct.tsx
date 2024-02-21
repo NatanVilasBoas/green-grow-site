@@ -21,11 +21,19 @@ const Card = styled.div`
         transform: translateY(-5px) scale(1.01);
         box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
     }
+
+    @media(max-width: 780px){
+        width: 300px;
+    }
 `
 
 const Title = styled.p`
     font-size: 24px;
     text-align: start;
+
+    @media(max-width: 780px){
+        font-size: 18px;
+    }
 `
 
 const Info = styled.div`
@@ -36,6 +44,10 @@ const Info = styled.div`
 
 const DescContainer = styled.div`
     text-align: left;
+
+    @media(max-width: 780px){
+        font-size: 12px;
+    }
 `
 
 const AddCart = styled.button`
@@ -56,6 +68,10 @@ const AddCart = styled.button`
 
     &:active{
         background-color: var(--dartmouth-green);
+    }
+
+    @media(max-width: 780px){
+        font-size: 12px;
     }
 `
 
