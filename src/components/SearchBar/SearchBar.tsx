@@ -4,17 +4,27 @@ const Container = styled.div`
     padding: 2vw;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `
 
 const SearchInput = styled.input`
     width: 80%;
-    border-radius: 12px 0 0 12px;
+    border-radius: 12px;
     padding: .8vw;
     box-sizing: border-box;
-`
+    font-size: 16px;
+    font-family: 'Poppins';
+    border: 1px solid var(--russet);
 
-const SearchButton = styled.button`
-    border-radius: 0 12px 12px 0;
+    @media(max-width: 800px){
+        font-size: 12px;
+    }
+
+    &:focus{
+        outline: none;
+        border: 2px solid var(--pigment-green);
+    }
 `
 
 interface SearchBarProps{
@@ -25,7 +35,6 @@ const SearchBar : React.FC<SearchBarProps>= ({filter}) => {
     return(
             <Container>
                 <SearchInput onChange={e => filter(e.target.value)} type="text" placeholder="Busque por um produto"/>
-                <SearchButton>Pesquisar</SearchButton>
             </Container>
     )
 }
