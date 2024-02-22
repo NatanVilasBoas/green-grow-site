@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IoSearch } from "react-icons/io5";
+import { memo, useMemo } from "react";
 
 const Container = styled.div`
     padding: 2vw;
@@ -34,12 +35,14 @@ interface SearchBarProps{
 }
 
 const SearchBar : React.FC<SearchBarProps>= ({filter, valorBusca}) => {
+    const icon = useMemo(() => <IoSearch size={20}/>, []);
+
     return(
             <Container>
-                <IoSearch size={20}/>
+                {icon}
                 <SearchInput value={valorBusca} onChange={e => filter(e.target.value)} type="text" placeholder="Busque por um produto"/>
             </Container>
     )
 }
 
-export default SearchBar;
+export default memo(SearchBar);
