@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { IoSearch } from "react-icons/io5";
 
 const Container = styled.div`
     padding: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 16px;
 `
 
 const SearchInput = styled.input`
@@ -29,12 +30,14 @@ const SearchInput = styled.input`
 
 interface SearchBarProps{
     filter: (value : string) => void;
+    valorBusca: string;
 }
 
-const SearchBar : React.FC<SearchBarProps>= ({filter}) => {
+const SearchBar : React.FC<SearchBarProps>= ({filter, valorBusca}) => {
     return(
             <Container>
-                <SearchInput onChange={e => filter(e.target.value)} type="text" placeholder="Busque por um produto"/>
+                <IoSearch size={20}/>
+                <SearchInput value={valorBusca} onChange={e => filter(e.target.value)} type="text" placeholder="Busque por um produto"/>
             </Container>
     )
 }

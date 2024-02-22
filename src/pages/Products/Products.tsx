@@ -41,7 +41,7 @@ const Products = () => {
 
     return (
         <>
-            <SearchBar filter={value => onHandleSearch(value)}/>
+            <SearchBar valorBusca={search} filter={value => onHandleSearch(value)}/>
             <Container>
                 <ToastContainer
                     position="top-center"
