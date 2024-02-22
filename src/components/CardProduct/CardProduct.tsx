@@ -78,7 +78,7 @@ const AddCart = styled.button`
 interface CardProductProps {
     id: number;
     titulo: string;
-    valor: number;
+    valor: string;
     quant: number;
     img: string;
     desc: string;

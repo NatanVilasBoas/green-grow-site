@@ -60,7 +60,7 @@ const Products = () => {
                         key={produto.id}
                         id={produto.id}
                         titulo={produto.title}
-                        valor={produto.value}
+                        valor={produto.value.toFixed(2)}
                         quant={produto.quant}
                         desc={produto.desc}
                         img="https://placehold.co/250x200"
