@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useCarrinhoContext } from "../../context/Carrinho";
 
 import 'react-toastify/dist/ReactToastify.css';
+import { memo } from "react";
 
 const Card = styled.div`
     display: flex;
@@ -115,4 +116,4 @@ const CardProduct: React.FC<CardProductProps> = ({ id, titulo, valor, quant, img
     )
 }
 
-export default CardProduct;
+export default memo(CardProduct);
