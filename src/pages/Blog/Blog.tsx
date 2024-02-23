@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import BlogPost from "../../components/BlogPost/BlogPost";
+import posts from '../../json/dbBlogPost.json';
 
 const Container = styled.section`
     display: flex;
@@ -11,8 +12,15 @@ const Container = styled.section`
 const Blog = () => {
     return (
         <Container>
-            <BlogPost />
-            <BlogPost />
+            {posts.map(post => {
+                return <BlogPost 
+                            key={post.id}
+                            titulo={post.title}
+                            desc={post.brevDesc}
+                            data={post.date}
+                            tipo={post.type}
+                        />
+            })}
         </Container>
     )
 }
