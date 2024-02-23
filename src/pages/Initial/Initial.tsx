@@ -47,6 +47,10 @@ const Initial = () => {
     
     const navigateFor = ( route : string) => {
         if (typeof navigate === 'function') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Comportamento de rolagem suave
+              });
             navigate(route);
         }
     } 
