@@ -41,6 +41,7 @@ const Post = styled.div`
     width: 88vw;
     border: 1px solid black;
     margin: 2vh 2vw;
+    cursor: pointer;
 
     @media(max-width: 800px){
 
@@ -66,11 +67,12 @@ interface Props {
     desc: string;
     data: string;
     tipo: string;
+    onHandleNavigate: () => void;
 }
 
-const BlogPost = ({ titulo, desc, data, tipo }: Props) => {
+const BlogPost = ({ titulo, desc, data, tipo, onHandleNavigate }: Props) => {
     return (
-        <Post role="post">
+        <Post onClick={onHandleNavigate} role="post">
             <Image>
             </Image>
             <Info>
