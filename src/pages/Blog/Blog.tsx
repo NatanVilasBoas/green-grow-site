@@ -14,8 +14,8 @@ const Blog = () => {
 
     const navigate = useNavigate();
 
-    const navigateFor =(id : number) => {
-        navigate(`/blog/${id}`);
+    const navigateFor =(post : typeof posts[0]) => {
+        navigate(`/blog/${post.id}`);
     }
 
     return (
@@ -27,7 +27,7 @@ const Blog = () => {
                             desc={post.brevDesc}
                             data={post.date}
                             tipo={post.type}
-                            onHandleNavigate={() => navigateFor(post.id)}
+                            onHandleNavigate={() => navigateFor(post)}
                         />
             })}
         </Container>
