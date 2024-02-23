@@ -6,10 +6,10 @@ const Info = styled.div`
     padding: 1vw;
 `
 
-const Image = styled.div`
+const Image = styled.div<{ img: string }>`
     height: inherit;
     width: 32vw;
-    background-image: url('https://placehold.co/400x350');
+    background-image: url(${props => props.img});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -67,13 +67,14 @@ interface Props {
     desc: string;
     data: string;
     tipo: string;
+    img: string;
     onHandleNavigate: () => void;
 }
 
-const BlogPost = ({ titulo, desc, data, tipo, onHandleNavigate }: Props) => {
+const BlogPost = ({ titulo, desc, data, tipo, img, onHandleNavigate }: Props) => {
     return (
         <Post onClick={onHandleNavigate} role="post">
-            <Image>
+            <Image img={img}>
             </Image>
             <Info>
                 <Title>{titulo}</Title>

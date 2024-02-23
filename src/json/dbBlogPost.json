@@ -3,30 +3,35 @@
     "title": "5 Dicas para Iniciar sua Horta Urbana em Casa",
     "brevDesc": "Dicas práticas e fáceis de seguir para ajudar os iniciantes a começarem sua própria horta urbana em casa. Ele inclui informações sobre seleção de plantas, preparo do solo, escolha de recipientes adequados, cuidados básicos e muito mais.",
     "date": "21-02-2024",
-    "type": "Artigo"
+    "type": "Artigo",
+    "img": "https://placehold.co/400x350"
 },{
     "id": 2,
     "title": "Como Cultivar Microgreens em Espaços Pequenos",
     "brevDesc": "Este post explora os benefícios de cultivar microgreens em ambientes urbanos e fornece um guia passo a passo sobre como começar. Ele cobre tópicos como seleção de sementes, métodos de cultivo, cuidados básicos e ideias para usar microgreens em receitas saudáveis.",
     "date": "21-02-2024",
-    "type": "Artigo"
+    "type": "Artigo",
+    "img": "https://placehold.co/400x350"
 },{
     "id": 3,
     "title": "Guia Completo para Compostagem Doméstica",
     "brevDesc": "Guia completo sobre como fazer compostagem em casa, incluindo os benefícios ambientais, os diferentes métodos de compostagem, o que pode e não pode ser compostado, dicas para manter uma pilha de compostagem saudável e como usar composto em seu jardim.",
     "date": "21-02-2024",
-    "type": "Artigo"
+    "type": "Artigo",
+    "img": "https://placehold.co/400x350"
 },{
     "id": 4,
     "title": "Como Montar um Sistema de Irrigação Automatizado para sua Horta",
     "brevDesc": "Este post explora os benefícios de um sistema de irrigação automatizado para jardineiros urbanos e fornece instruções passo a passo sobre como montar e configurar um sistema de irrigação automático em sua horta. Ele inclui recomendações de produtos e dicas para maximizar a eficiência da irrigação.",
     "date": "21-02-2024",
-    "type": "Artigo"
+    "type": "Artigo",
+    "img": "https://placehold.co/400x350"
 },{
     "id": 5,
     "title": "Benefícios da Agricultura Urbana para o Meio Ambiente e a Saúde   ",
     "brevDesc": "Neste post informativo, a GreenGrow discute os benefícios ambientais, sociais e de saúde da agricultura urbana sustentável. Ele destaca como a agricultura urbana pode ajudar a reduzir a pegada de carbono, promover a segurança alimentar, melhorar a qualidade do ar e proporcionar uma conexão mais forte com a natureza.",
     "date": "21-02-2024",
-    "type": "Artigo"
+    "type": "Artigo",
+    "img": "https://placehold.co/400x350"
 }
 ]

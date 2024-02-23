@@ -27,6 +27,7 @@ const Blog = () => {
                             desc={post.brevDesc}
                             data={post.date}
                             tipo={post.type}
+                            img={post.img}
                             onHandleNavigate={() => navigateFor(post)}
                         />
             })}
