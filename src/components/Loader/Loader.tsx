@@ -2,7 +2,7 @@ import './Loader.css'
 
 const Loader = () => {
     return (
-        <div style={{display: 'flex', justifyContent:'center', alignItems:'center', width:'100%'}}>
+        <div style={{display: 'flex', justifyContent:'center', alignItems:'center', width:'100%', margin:'42vh 0'}}>
             <svg className='loader' viewBox="25 25 50 50">
                 <circle r="20" cy="50" cx="50"></circle>
             </svg>
