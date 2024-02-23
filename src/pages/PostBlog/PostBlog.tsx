@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import posts from '../../json/dbBlogPost.json'
-import styled from 'styled-components';
+import styled, { StyleSheetManager } from 'styled-components';
 
 
 const Image = styled.div<{ img: string }>`
@@ -19,10 +19,12 @@ const PostBlog = () => {
     const post = postId !== undefined ? posts.find(post => post.id === postId) : null;
 
     return (
-        <section>
-            <Image img={ post?.img ? post.img : ''} />
-            <p>{post?.brevDesc}</p>
-        </section>
+        <StyleSheetManager shouldForwardProp={(prop) => prop !== 'img'}>
+            <section>
+                <Image img={post?.img ? post.img : ''} />
+                <h1>{post?.title}</h1>
+            </section>
+        </StyleSheetManager>
     )
 }
 
