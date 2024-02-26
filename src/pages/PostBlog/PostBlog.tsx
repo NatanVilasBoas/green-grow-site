@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import posts from '../../json/dbBlogPost.json'
 import styled, { StyleSheetManager } from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
 
 const Image = styled.div<{ img: string }>`
@@ -23,6 +24,7 @@ const PostBlog = () => {
             <section>
                 <Image img={post?.img ? post.img : ''} />
                 <h1>{post?.title}</h1>
+                <p><ReactMarkdown>{post?.text}</ReactMarkdown></p>
             </section>
         </StyleSheetManager>
     )
