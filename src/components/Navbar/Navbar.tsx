@@ -59,7 +59,6 @@ const Navbar = () => {
             <NavLink onClick={(event) => handleNavigation(event, '/')}>Inicio</NavLink>
             <NavLink onClick={(event) => handleNavigation(event, '/products')}>Produtos</NavLink>
             <NavLink onClick={(event) => handleNavigation(event, '/blog')}>Blog</NavLink>
-            <NavLink onClick={(event) => handleNavigation(event, '/projects')}>Projetos</NavLink>
             <NavLink onClick={(event) => handleNavigation(event, '/contact')}>Contato</NavLink>
             <NavLink onClick={(event) => handleNavigation(event, '/cart')}>
                 <CartIconContainer>
