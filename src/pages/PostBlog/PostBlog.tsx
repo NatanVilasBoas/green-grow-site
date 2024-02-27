@@ -11,6 +11,7 @@ const Image = styled.div<{ img: string }>`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-bottom: 4px solid rgb(1, 91, 22);
 `
 
 const PostBlog = () => {
@@ -23,8 +24,8 @@ const PostBlog = () => {
         <StyleSheetManager shouldForwardProp={(prop) => prop !== 'img'}>
             <section>
                 <Image img={post?.img ? post.img : ''} />
-                <h1>{post?.title}</h1>
-                <div style={{margin:'2vw', fontSize:'18px'}}><ReactMarkdown>{post?.text}</ReactMarkdown></div>
+                <h1 style={{padding:'2vw'}}>{post?.title}</h1>
+                <div style={{padding:'2vh 4vw', fontSize:'18px'}}><ReactMarkdown>{post?.text}</ReactMarkdown></div>
             </section>
         </StyleSheetManager>
     )

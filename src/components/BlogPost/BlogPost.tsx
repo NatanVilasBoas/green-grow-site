@@ -8,6 +8,8 @@ const Info = styled.div`
 
 const Image = styled.div<{ img: string }>`
     height: inherit;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
     width: 32vw;
     background-image: url(${props => props.img});
     background-repeat: no-repeat;
@@ -39,9 +41,17 @@ const Footer = styled.div`
 const Post = styled.div`
     display: flex;
     width: 88vw;
-    border: 1px solid black;
-    margin: 2vh 2vw;
+    border: 1px solid rgb(1, 91, 22);
+    border-radius: 24px;
+    margin: 4vh 2vw;
     cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgba(1, 91, 22, 0.1);
+    transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+
+    &:hover{
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 10px 10px 10px 5px rgba(1, 91, 22, 0.1);
+    }
 
     @media(max-width: 800px){
 
@@ -80,8 +90,8 @@ const BlogPost = ({ titulo, desc, data, tipo, img, onHandleNavigate }: Props) =>
                 <Title>{titulo}</Title>
                 <Desc>{desc}</Desc>
                 <Footer>
-                    <p>{data}</p>
-                    <p>{tipo}</p>
+                    <p style={{fontWeight: '600'}}>{data}</p>
+                    <p style={{fontWeight: '600'}}>{tipo}</p>
                 </Footer>
             </Info>
         </Post>
