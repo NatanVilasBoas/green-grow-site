@@ -24,7 +24,7 @@ const PostBlog = () => {
             <section>
                 <Image img={post?.img ? post.img : ''} />
                 <h1>{post?.title}</h1>
-                <p><ReactMarkdown>{post?.text}</ReactMarkdown></p>
+                <p style={{margin:'2vw', fontSize:'18px'}}><ReactMarkdown>{post?.text}</ReactMarkdown></p>
             </section>
         </StyleSheetManager>
     )
