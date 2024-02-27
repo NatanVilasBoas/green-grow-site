@@ -9,6 +9,35 @@ const Label = styled.label`
     margin-bottom: 12px;
 `
 
+const Input = styled.input`
+    width: 100%;
+    padding: .8rem;
+    font-size: 16px;
+    border: 1px solid;
+    border-color: var(--russet);
+    border-radius: 12px;
+
+    &:focus{
+        outline: none;
+        border: 2px solid;
+        border-color: var(--pigment-green);
+    }
+`
+
+const TextArea = styled.textarea`
+    width: 100%;
+    padding: .8rem;
+    font-size: 16px;
+    border: 1px solid;
+    border-color: var(--russet);
+    border-radius: 12px;
+
+    &:focus{
+        outline: none;
+        border: 2px solid var(--pigment-green);
+    }
+`
+
 interface Props {
     titulo: string;
     text: boolean;
@@ -20,15 +49,14 @@ const InputFormsContact : React.FC<Props> = ({titulo, text, onHandleChange, isDi
     return (
         <Container>
             <Label htmlFor={titulo.toLocaleLowerCase()}>{titulo}</Label>
-            {text ? <input 
+            {text ? <Input 
                         type="text" 
                         id={titulo.toLocaleLowerCase()} 
                         name={titulo.toLocaleLowerCase()} 
                         required onChange={(e) => onHandleChange && onHandleChange(e.target.value)}/> 
-                : <textarea 
+                : <TextArea 
                     name={titulo.toLocaleLowerCase()} 
-                    id={titulo.toLocaleLowerCase()} 
-                    cols={36} 
+                    id={titulo.toLocaleLowerCase()}
                     rows={8} 
                     disabled = {isDisabled ? true : false}/>}
             
