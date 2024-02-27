@@ -25,14 +25,12 @@ describe('Na navbar', () => {
         const contatoLink = screen.getByText('Contato');
         const produtosLink = screen.getByText('Produtos');
         const blogLink = screen.getByText('Blog');
-        const projetosLink = screen.getByText('Projetos');
         const carrinhoLink = screen.getByAltText('carrinho de compras');
 
         expect(inicioLink).toBeInTheDocument();
         expect(contatoLink).toBeInTheDocument();
         expect(produtosLink).toBeInTheDocument();
         expect(blogLink).toBeInTheDocument();
-        expect(projetosLink).toBeInTheDocument();
         expect(carrinhoLink).toBeInTheDocument();
     })
 

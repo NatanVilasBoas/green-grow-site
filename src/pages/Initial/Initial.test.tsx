@@ -10,6 +10,11 @@ jest.mock('react-router-dom', () => {
     }
 })
 
+const scrollToMock = jest.fn();
+beforeEach(() => {
+  window.scrollTo = scrollToMock;
+});
+
 describe('A página inicial', () => {
     test('deve ser renderizada', () => {
         const {container} = render(<Initial/>)
