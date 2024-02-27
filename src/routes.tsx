@@ -5,6 +5,7 @@ import CarrinhoProvider from "./context/Carrinho";
 import { lazy, Suspense } from "react";
 import Loader from "./components/Loader/Loader";
 import PostBlog from "./pages/PostBlog/PostBlog";
+import Contact from "./pages/Contact/Contact";
 
 const Initial = lazy(() => import('./pages/Initial/Initial'))
 const Products = lazy(() => import('./pages/Products/Products'))
@@ -22,6 +23,7 @@ const AppRoutes = () => {
                         <Route path="/products" element={<Products />} />
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/blog/:id" element={<PostBlog />} />
+                        <Route path="/contact" element={<Contact />} />
                         <Route path="/cart" element={<Cart />} />
                     </Routes>
                 </Suspense>
