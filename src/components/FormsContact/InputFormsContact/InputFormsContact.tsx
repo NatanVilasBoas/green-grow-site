@@ -11,14 +11,26 @@ const Label = styled.label`
 
 interface Props {
     titulo: string;
-    text: boolean
+    text: boolean;
+    onHandleChange?: (e: string) => void;
+    isDisabled?: boolean;
 }
 
-const InputFormsContact : React.FC<Props> = ({titulo, text}) => {
+const InputFormsContact : React.FC<Props> = ({titulo, text, onHandleChange, isDisabled}) => {
     return (
         <Container>
             <Label htmlFor={titulo.toLocaleLowerCase()}>{titulo}</Label>
-            {text ? <input type="text" id={titulo.toLocaleLowerCase()} name={titulo.toLocaleLowerCase()} required/> : <textarea name="mensagem" cols={36} rows={8}/>}
+            {text ? <input 
+                        type="text" 
+                        id={titulo.toLocaleLowerCase()} 
+                        name={titulo.toLocaleLowerCase()} 
+                        required onChange={(e) => onHandleChange && onHandleChange(e.target.value)}/> 
+                : <textarea 
+                    name={titulo.toLocaleLowerCase()} 
+                    id={titulo.toLocaleLowerCase()} 
+                    cols={36} 
+                    rows={8} 
+                    disabled = {isDisabled ? true : false}/>}
             
         </Container>
     )
