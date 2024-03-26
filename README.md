@@ -21,17 +21,6 @@ Com isso, use o comando
 ```bash
 npm install
 ```
-
-Além disso, será necesário instalar o react-router-dom e styled-components com os seguintes comandos
-
-```bash
-npm install react-router-dom
-```
-
-```bash
-npm install styled-components
-```
-
 Por fim, basta executá-lo com
 
 ```bash
